@@ -44,10 +44,6 @@ function setFormSubmissionEventHandler(event) {
     document.querySelector("span#language").innerText = lang1;
     document.querySelector("span#languageDescription").innerText = lang1Description;
     outcome.removeAttribute("class");
-  } else if (userField === "Game Development") {
-    document.querySelector("span#language").innerText = lang1;
-    document.querySelector("span#languageDescription").innerText = lang1Description;
-    outcome.removeAttribute("class");
   } else if (workplaceInput === "Google") {
     document.querySelector("span#language").innerText = lang2;
     document.querySelector("span#languageDescription").innerText = lang2Description;
