@@ -36,21 +36,21 @@ function setFormSubmissionEventHandler(event) {
   invalid.setAttribute("class", "hidden")
 
 
-  if (workplaceInput === "Bungie", userField === "Game Development") {
-    document.querySelector("span#language").innerText = lang1
-    document.querySelector("span#languageDescription").innerText = lang1Description
+  if (userField === "Game Development") {
+    document.querySelector("span#language").innerText = lang1;
+    document.querySelector("span#languageDescription").innerText = lang1Description;
     outcome.removeAttribute("class");
-  } else if (userField === "Web and App Development", userField === "Software Engineer", osInput === "Windows", workplaceInput === "Google") {
-    document.querySelector("span#language").innerText = lang2
-    document.querySelector("span#languageDescription").innerText = lang2Description
+  } else if (workplaceInput === "Google") {
+    document.querySelector("span#language").innerText = lang2;
+    document.querySelector("span#languageDescription").innerText = lang2Description;
     outcome.removeAttribute("class");
-  } else if ( osInput === "MacOS", workplaceInput === "Apple", userField === "Web and App Development", userField === "Software Engineer") {
-    document.querySelector("span#language").innerText = lang2
-    document.querySelector("span#languageDescription").innerText = lang2Description
+  } else if (workplaceInput === "Apple") {
+    document.querySelector("span#language").innerText = lang2;
+    document.querySelector("span#languageDescription").innerText = lang2Description;
     outcome.removeAttribute("class");
-  } else if (userField === "Data Science", userField === "Learning For Fun") {
-    document.querySelector("span#language").innerText = lang3
-    document.querySelector("span#languageDescription").innerText = lang3Description
+  } else if (workplaceInput === "Microsoft") {
+    document.querySelector("span#language").innerText = lang3;
+    document.querySelector("span#languageDescription").innerText = lang3Description;
     outcome.removeAttribute("class");
   }
 }
