@@ -13,23 +13,33 @@ function questionSet() {
   document.querySelector("span#os1a").innerText = osInput;
   document.querySelector("span#workplace1a").innerText = workplaceInput;
   
+  console.log(workplaceInput);
 }
 
 function setFormSubmissionEventHandler(event) {
   event.preventDefault();
   questionSet();
-  outcome.setAttribute("class", "hidden")
-  invalid.setAttribute("class", "hidden")
-
-  const outcome = document.getElementById("outcome");
+  const outcome1 = document.getElementById("outcome1");
   const outcome2 = document.getElementById("outcome2");
   const outcome3 = document.getElementById("outcome3");
   const invalid = document.getElementById("invalid");
 
-  if ()
+  outcome1.setAttribute("class", "hidden")
+  outcome2.setAttribute("class", "hidden")
+  outcome3.setAttribute("class", "hidden")
+  invalid.setAttribute("class", "hidden")
+
+
+  if (userField === "Game Development", workplaceInput === "Bungie") {
+    outcome1.removeAttribute("class");
+  } else if (userField === "Web and App Development", userField === "Software Engineer", workplaceInput === "Google", workplaceInput === "Apple") {
+    outcome2.removeAttribute("class")
+  } else (userField === "Data Science", userField === "Learning For Fun") 
+    outcome3.removeAttribute("class");
 }
+
 
 window.addEventListener("load", function(event) {
   let form = document.getElementById("questionSet");
   form.addEventListener("submit", setFormSubmissionEventHandler)
-});
+  });
