@@ -1,5 +1,12 @@
 // Business Logic
 
+const lang1Description = "C++ is primarily used in Game Development. It is the most widely used language in that regard. The language is also used for GUI based applications, operating systems, and many other cases."
+const lang2Description = "C# is used for a wide range of things. Such as developing web applications and services, desktop applications, and it is also used to make games in the Unity engine."
+const lang3Description = "JavaScript is mainly used for adding more interactive and animated behavior to websites, building servers, creating apps, and even game development."
+const lang1 = "C++"
+const lang2 = "C#"
+const lang3 = "JavaScript"
+
 function questionSet() {
   const nameInput = document.getElementById("nameInput").value;
   const userField = document.getElementById("userField").value;
@@ -19,23 +26,33 @@ function questionSet() {
 function setFormSubmissionEventHandler(event) {
   event.preventDefault();
   questionSet();
-  const outcome1 = document.getElementById("outcome1");
-  const outcome2 = document.getElementById("outcome2");
-  const outcome3 = document.getElementById("outcome3");
+  const outcome = document.getElementById("outcome");
   const invalid = document.getElementById("invalid");
+  const workplaceInput = document.querySelector("input[name='workplace']:checked").value;
+  const osInput = document.querySelector("input[name='OS']:checked").value;
 
-  outcome1.setAttribute("class", "hidden")
-  outcome2.setAttribute("class", "hidden")
-  outcome3.setAttribute("class", "hidden")
+
+  outcome.setAttribute("class", "hidden")
   invalid.setAttribute("class", "hidden")
 
 
-  if (userField === "Game Development", workplaceInput === "Bungie") {
-    outcome1.removeAttribute("class");
-  } else if (userField === "Web and App Development", userField === "Software Engineer", workplaceInput === "Google", workplaceInput === "Apple") {
-    outcome2.removeAttribute("class")
-  } else (userField === "Data Science", userField === "Learning For Fun") 
-    outcome3.removeAttribute("class");
+  if (workplaceInput === "Bungie", userField === "Game Development") {
+    document.querySelector("span#language").innerText = lang1
+    document.querySelector("span#languageDescription").innerText = lang1Description
+    outcome.removeAttribute("class");
+  } else if (userField === "Web and App Development", userField === "Software Engineer", osInput === "Windows", workplaceInput === "Google") {
+    document.querySelector("span#language").innerText = lang2
+    document.querySelector("span#languageDescription").innerText = lang2Description
+    outcome.removeAttribute("class");
+  } else if ( osInput === "MacOS", workplaceInput === "Apple", userField === "Web and App Development", userField === "Software Engineer") {
+    document.querySelector("span#language").innerText = lang2
+    document.querySelector("span#languageDescription").innerText = lang2Description
+    outcome.removeAttribute("class");
+  } else if (userField === "Data Science", userField === "Learning For Fun") {
+    document.querySelector("span#language").innerText = lang3
+    document.querySelector("span#languageDescription").innerText = lang3Description
+    outcome.removeAttribute("class");
+  }
 }
 
 
