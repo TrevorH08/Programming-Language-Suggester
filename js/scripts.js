@@ -20,6 +20,13 @@ function setFormSubmissionEventHandler(event) {
   questionSet();
   outcome.setAttribute("class", "hidden")
   invalid.setAttribute("class", "hidden")
+
+  const outcome = document.getElementById("outcome");
+  const outcome2 = document.getElementById("outcome2");
+  const outcome3 = document.getElementById("outcome3");
+  const invalid = document.getElementById("invalid");
+
+  if ()
 }
 
 window.addEventListener("load", function(event) {
