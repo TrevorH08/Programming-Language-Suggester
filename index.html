@@ -8,9 +8,11 @@
   <body>
     <h1>Which Programming Language Is Right For You?</h1>
     <h3>Fill out this brief questionnaire to find out!</h3>
-    <p>1. What position are you going for with this knowledge?</p>
     <form id="questionSet">
-      <select id="userInput">
+      <label for="nameInput">1. First things first, what is your name?</label>
+      <input id="nameInput" type="text" />
+      <p>2. What position are you going for with this knowledge?</p>
+      <select id="userField">
         <option>Game Development</option>
         <option>Web and App Development</option>
         <option>Data Science</option>
@@ -18,7 +20,7 @@
         <option>Learning For Fun</option>
       </select>
       <br />
-      <p>2. What operating system do you use?</p>
+      <p>3. What operating system do you use?</p>
       <label>
         <input type="radio" name="OS" value="Windows" />
         Windows
@@ -31,6 +33,20 @@
         <input type="radio" name="OS" value="Linux" />
         Linux
       </label>
+      <br />
+      <p>4. What is your favorite DnD Class</p>
+      <select id="userClass">
+        <option>Barbarian</option>
+        <option>Fighter</option>
+        <option>Cleric</option>
+        <option>Paladin</option>
+        <option>Druid</option>
+        <option>Rogue</option>
+        <option>Ranger</option>
+        <option>Sorcerer</option>
+        <option>Wizard</option>
+        <option>I don't have one</option>
+      </select>
       <br />
     </form>
   </body>
