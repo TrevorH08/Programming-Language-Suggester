@@ -52,10 +52,11 @@ function setFormSubmissionEventHandler(event) {
     document.querySelector("span#language").innerText = lang3;
     document.querySelector("span#languageDescription").innerText = lang3Description;
     outcome.removeAttribute("class");
-  } else if (workplaceInput === "Apple") {
+  } else { (workplaceInput === "Apple"); {
     document.querySelector("span#language").innerText = lang4;
     document.querySelector("span#languageDescription").innerText = lang4Description;
     outcome.removeAttribute("class");
+    } 
   }
 }
 
